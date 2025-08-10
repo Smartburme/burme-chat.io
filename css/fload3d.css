@@ -1,0 +1,49 @@
+.float3d-bottom {
+  position: fixed;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  perspective: 700px;
+  z-index: 9999;
+}
+
+.float3d-btn {
+  background: linear-gradient(145deg, #061506, #0b260b);
+  border-radius: 16px;
+  border: 2px solid #00ff00cc;
+  box-shadow:
+    0 8px 15px #00ff0099,
+    inset 0 0 10px #00ff0055;
+  color: #00ff00;
+  font-weight: 700;
+  font-size: 1.3rem;
+  padding: 18px 36px;
+  cursor: pointer;
+  transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.3s ease;
+  text-shadow: 0 0 8px #00ff00bb;
+  transform-style: preserve-3d;
+  perspective-origin: center bottom;
+  user-select: none;
+}
+
+.float3d-btn:hover {
+  transform: translateY(-8px) rotateX(8deg) rotateY(8deg) scale(1.05);
+  box-shadow:
+    0 14px 20px #00ff00ee,
+    inset 0 0 20px #00ff0099;
+}
+
+.float3d-btn:active,
+.float3d-btn.active {
+  transform: translateY(-4px) rotateX(4deg) rotateY(4deg) scale(0.98);
+  box-shadow:
+    0 5px 8px #00ff0088,
+    inset 0 0 15px #00ff0066;
+  background: linear-gradient(145deg, #0a2a0a, #064006);
+  color: #b0ffb0;
+  text-shadow: 0 0 12px #b0ffb0cc;
+}
