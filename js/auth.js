@@ -1,24 +1,8 @@
-// auth.js - placeholder login logic (PGS, Gmail, etc.)
-
-async function loginUser(username, password) {
-  try {
-    // Fake async login simulation
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    if (username === "admin" && password === "password123") {
-      alert("Login Successful!");
-      window.location.href = "/pages/main.html";
-    } else {
-      alert("Login failed. Please check your credentials.");
-    }
-  } catch (err) {
-    alert("Error during login: " + err.message);
-  }
-}
-
-// Example usage from a login form
-document.getElementById('loginForm')?.addEventListener('submit', e => {
-  e.preventDefault();
-  const username = e.target.username.value;
-  const password = e.target.password.value;
-  loginUser(username, password);
-});
+const firebaseConfig = {
+  apiKey: "AIzaSyAr7Hv2ApKtNTxF11MhT5cuWeg_Dgsh0TY",
+  authDomain: "smart-burme-app.firebaseapp.com",
+  projectId: "smart-burme-app",
+  storageBucket: "smart-burme-app.appspot.com",
+  messagingSenderId: "851502425686",
+  appId: "1:851502425686:web:f29e0e1dfa84794b4abdf7"
+};
