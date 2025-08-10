@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burme Social App</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* Loader center style */
+    #loader {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 700;
+      font-size: 2rem;
+      color: #0f4c75;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% {opacity: 1;}
+      50% {opacity: 0.3;}
+    }
+    body {
+      background: linear-gradient(135deg, #00b7ff, #005f99);
+      margin: 0;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="loader">Loading Burme Social...</div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "pages/main.html";
+    }, 2000);
+  </script>
+</body>
+</html>
