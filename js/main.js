@@ -1,27 +1,23 @@
-// main.js - simple SPA navigation & UI utility
+const btnFriends = document.getElementById("btnFriends");
+const btnGroup = document.getElementById("btnGroup");
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Simple navigation example - can expand for SPA logic
-  const navLinks = document.querySelectorAll('[data-link]');
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetPage = e.target.getAttribute('href');
-      if (targetPage) {
-        window.location.href = targetPage;
-      }
-    });
-  });
+function activateButton(btn) {
+  btnFriends.classList.remove("active");
+  btnGroup.classList.remove("active");
+  btn.classList.add("active");
+}
 
-  // Add smooth scroll for all anchors
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetID = anchor.getAttribute('href').slice(1);
-      const target = document.getElementById(targetID);
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
+btnFriends.addEventListener("click", () => {
+  activateButton(btnFriends);
+  console.log("Friends Chat Activated");
+  // TODO: Show friends chat UI
 });
+
+btnGroup.addEventListener("click", () => {
+  activateButton(btnGroup);
+  console.log("Group Chat Activated");
+  // TODO: Show group chat UI
+});
+
+// Default active button on page load
+activateButton(btnFriends);
