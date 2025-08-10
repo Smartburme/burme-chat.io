@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Burme Chat - Main Chat</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/float3d.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <img src="./assets/logo.png" alt="Burme Chat Logo" class="logo" />
+    <h1>Burme Chat မှ ကြိုဆိုပါတယ်</h1>
+    <button id="btnLogout" class="btn-logout" aria-label="Logout">🔓 Logout</button>
+  </header>
+
+  <!-- Chat container -->
+  <main class="chat-container">
+
+    <!-- Chat messages display -->
+    <section id="chatMessages" class="chat-messages"></section>
+
+    <!-- Chat input area -->
+    <form id="chatForm" class="chat-form" autocomplete="off">
+      <input type="text" id="chatInput" placeholder="စာပို့ရန်..." required />
+      <label for="imageUpload" class="upload-label" title="ပုံတင်ရန် 📷">📷</label>
+      <input type="file" id="imageUpload" accept="image/*" hidden />
+      <button type="submit" class="btn-send" aria-label="Send Message">ᐷ</button>
+    </form>
+
+  </main>
+
+  <!-- Floating Buttons -->
+  <div class="float3d-bottom">
+    <button id="btnFriends" class="float3d-btn" aria-label="Friends Chat">
+      📱 Friends Chat
+    </button>
+    <button id="btnGroup" class="float3d-btn" aria-label="Group Chat">
+      👥 Group Chat
+    </button>
+  </div>
+
+  <script type="module" src="./js/firebase.config.js"></script>
+  <script type="module" src="./js/auth.js"></script>
+  <script type="module" src="./js/float3d.js"></script>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
