@@ -1,10 +1,13 @@
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAr7Hv2ApKtNTxF11MhT5cuWeg_Dgsh0TY",
-  authDomain: "smart-burme-app.firebaseapp.com",
-  projectId: "smart-burme-app",
-  storageBucket: "smart-burme-app.appspot.com",
-  messagingSenderId: "851502425686",
-  appId: "1:851502425686:web:f29e0e1dfa84794b4abdf7"
+  apiKey: "AIzaSyDJIEau3tH_E5JavhBxvaDt5oXDIveizdQ",
+  authDomain: "smart-burme.firebaseapp.com",
+  databaseURL: "https://smart-burme-default-rtdb.firebaseio.com",
+  projectId: "smart-burme",
+  storageBucket: "smart-burme.firebasestorage.app",
+  messagingSenderId: "827488800415",
+  appId: "1:827488800415:web:7553f4d59d8c6a0f119caa",
+  measurementId: "G-N0YGXKXSE4"
 };
 // Firebase initialization must be done before import of other modules that use Firebase
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js";
